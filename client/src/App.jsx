@@ -1,20 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.css'
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import LandingPage from "./pages/LandingPage";
+import Signup from "./pages/Signup";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-        <div className="h-screen flex items-center justify-center bg-slate-900">
-      <h1 className="text-4xl font-bold text-green-400">
-        Tailwind is Working
-      </h1>
+    <div className="min-h-screen bg-neutral-950">
+      {/* Header stays constant */}
+      <Header isAuthenticated={false} />
+
+      {/* Route-based page rendering */}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
+
