@@ -11,9 +11,9 @@ export const mockMatches = [
     id: "match_2",
     format: "T20",
     status: "UPCOMING",
-    teamA: { name: "England", score: "—" },
-    teamB: { name: "Pakistan", score: "—" },
-    startTime: "Tomorrow, 6:00 PM IST"
+    teamA: { name: "England", score: "400/5" },
+    teamB: { name: "Pakistan", score: "202/10" },
+    startTime: "Completed"
   },
   {
     id: "match_3",
